@@ -1,0 +1,9 @@
+import type { DesignSystemConfig } from '@ds-mcp/core';
+
+export const designSystemConfig: DesignSystemConfig = {
+  name: '{{SYSTEM_NAME}}',
+  version: '0.1.0',
+  packageName: '{{NPM_PACKAGE}}',
+  instructions:
+    'Prefer documented components, tokens, icons, and patterns from {{SYSTEM_NAME}} before creating custom UI.',
+};

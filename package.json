@@ -1,0 +1,36 @@
+{
+  "name": "design-system-mcp-kit",
+  "private": true,
+  "description": "Generic scaffold for building MCP servers that expose design systems to AI agents",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ak-shaa/design-system-mcp-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ak-shaa/design-system-mcp-kit/issues"
+  },
+  "homepage": "https://github.com/ak-shaa/design-system-mcp-kit#readme",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "design-system",
+    "design-tokens",
+    "storybook",
+    "ai-agents",
+    "cursor"
+  ],
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "example:acme": "npm run start --workspace @example/acme-ds-mcp",
+    "create:ds-mcp": "node scripts/create-ds-mcp.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

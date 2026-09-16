@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+import { StdioServerTransport } from '@modelcontextprotocol/server/stdio';
+
+import { createDesignSystemServer } from './server.js';
+
+try {
+  const server = createDesignSystemServer();
+  await server.connect(new StdioServerTransport());
+} catch (error) {
+  const message = error instanceof Error ? error.message : String(error);
+  process.stderr.write(`[{{SLUG}}-mcp] fatal: ${message}\n`);
+  process.exit(1);
+}

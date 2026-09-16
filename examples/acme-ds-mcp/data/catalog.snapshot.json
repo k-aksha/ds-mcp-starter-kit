@@ -1,0 +1,84 @@
+{
+  "components": [
+    {
+      "id": "button",
+      "name": "Button",
+      "importPath": "@acme/design-system/Button",
+      "description": "Primary action trigger with variants for primary, secondary, and danger."
+    },
+    {
+      "id": "text-input",
+      "name": "TextInput",
+      "importPath": "@acme/design-system/TextInput",
+      "description": "Single-line text field with label, validation, and helper text support."
+    },
+    {
+      "id": "data-table",
+      "name": "DataTable",
+      "importPath": "@acme/design-system/DataTable",
+      "description": "Sortable, filterable table for dense enterprise data views."
+    }
+  ],
+  "patterns": [
+    {
+      "id": "empty-states",
+      "name": "Empty States",
+      "category": "ui",
+      "description": "Use when there is no data yet. Explain why it is empty and provide a primary next action."
+    },
+    {
+      "id": "forms",
+      "name": "Forms",
+      "category": "ui",
+      "description": "Group related inputs, show validation inline, and preserve user input on errors."
+    }
+  ],
+  "tokens": [
+    {
+      "name": "color.text.primary",
+      "value": "#1f2328",
+      "group": "color",
+      "cssVariable": "--acme-color-text-primary",
+      "description": "Default body text color"
+    },
+    {
+      "name": "color.bg.surface",
+      "value": "#ffffff",
+      "group": "color",
+      "cssVariable": "--acme-color-bg-surface",
+      "description": "Default surface background"
+    },
+    {
+      "name": "space.4",
+      "value": "16px",
+      "group": "space",
+      "cssVariable": "--acme-space-4",
+      "description": "Standard medium spacing unit"
+    },
+    {
+      "name": "font.body.md",
+      "value": "14px / 20px",
+      "group": "typography",
+      "cssVariable": "--acme-font-body-md",
+      "description": "Default body typography"
+    }
+  ],
+  "icons": [
+    {
+      "name": "Check",
+      "keywords": ["success", "done", "confirm"],
+      "sizes": ["16", "24"]
+    },
+    {
+      "name": "Alert",
+      "keywords": ["warning", "caution"],
+      "sizes": ["16", "24"]
+    }
+  ],
+  "docs": {
+    "gettingStarted": "Install @acme/design-system, wrap your app with AcmeProvider, import the default theme, and use documented components before creating custom UI.",
+    "codingGuidelines": "Use Acme components for all standard UI. Reach for tokens before raw CSS. Document deviations and add accessibility checks for every new screen.",
+    "colorUsage": "Use semantic color tokens for text, surfaces, borders, and status. Reserve brand accent colors for primary actions and key highlights.",
+    "typographyUsage": "Use typography tokens for page titles, section headers, body copy, captions, and labels. Avoid one-off font sizes."
+  }
+}
