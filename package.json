@@ -1,7 +1,7 @@
 {
   "name": "design-system-mcp-kit",
   "private": true,
-  "description": "Generic scaffold for building MCP servers that expose design systems to AI agents",
+  "description": "Open-source toolkit for building MCP servers that expose design systems to AI agents",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -28,9 +28,23 @@
     "build": "npm run build --workspaces --if-present",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "example:acme": "npm run start --workspace @example/acme-ds-mcp",
+    "preview:acme": "mcp-inspector --web node examples/acme-ds-mcp/dist/index.js",
     "create:ds-mcp": "node scripts/create-ds-mcp.mjs"
   },
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/inspector": "^2.7.0"
+  },
+  "optionalDependencies": {
+    "@rolldown/binding-darwin-arm64": "1.2.9",
+    "@rolldown/binding-darwin-x64": "1.2.9",
+    "@rolldown/binding-linux-arm64-gnu": "1.2.9",
+    "@rolldown/binding-linux-arm64-musl": "1.2.9",
+    "@rolldown/binding-linux-x64-gnu": "1.2.9",
+    "@rolldown/binding-linux-x64-musl": "1.2.9",
+    "@rolldown/binding-win32-arm64-msvc": "1.2.9",
+    "@rolldown/binding-win32-x64-msvc": "1.2.9"
   }
 }

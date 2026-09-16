@@ -2,12 +2,12 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Generic scaffold for teams building an MCP server that exposes their design system to AI agents.
+Open-source toolkit for building MCP servers that expose your design system to AI agents.
 
-Inspired by GitHub Primer's [`@primer/mcp`](https://primer.style/product/getting-started/foundations/mcp/), but split into:
+Inspired by GitHub Primer's [`@primer/mcp`](https://primer.style/product/getting-started/foundations/mcp/), structured as:
 
 - **`@ds-mcp/core`** — reusable framework (tools, registry, adapter contracts)
-- **`examples/acme-ds-mcp`** — minimal working implementation teams can copy
+- **`examples/acme-ds-mcp`** — reference implementation you can fork or copy
 
 ## Why this exists
 
@@ -65,7 +65,8 @@ Tools auto-register only when the required adapter is present.
 ```bash
 npm install
 npm run build
-npm run example:acme
+npm run preview:acme   # opens MCP Inspector to browse and test tools
+npm run example:acme   # runs the Acme server on stdio
 ```
 
 ### Cursor / VS Code MCP config
@@ -112,7 +113,7 @@ Replace snapshot adapters with real integrations:
 - Add custom tools via `extraTools` (e.g. `review_jsx`, `suggest_token`, `migrate_component`)
 - Version MCP package alongside design-system semver
 
-## Adapter contract (minimal example)
+## Adapter contract (example)
 
 ```ts
 import { createDesignSystemMcpServer } from '@ds-mcp/core';
